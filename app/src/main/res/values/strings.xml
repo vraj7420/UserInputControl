@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">BookLibrary</string>
+    <string name="book_list">Book List</string>
+    <string name="add_book">Add Book</string>
+    <string name="welcome_to_book_library">Welcome to Book Library</string>
+    <string name="enter_book_name">Enter Book Name</string>
+    <string name="enter_book_author_name">Enter Book Author Name</string>
+    <string name="functional">Functional</string>
+    <string name="non_functional">Non Functional</string>
+    <string name="enter_date_of_launch">Enter Date Of Launch</string>
+    <string name="children">Children</string>
+    <string name="select_book_prefer_age_group">Select Book Prefer Age Group</string>
+    <string name="youth">Youth</string>
+    <string name="senior">Senior</string>
+    <string name="adult">Adult</string>
+    <string name="for_new_book_add_fill_the_details">For New Book Add Fill The Details</string>
+    <string name="select_book_type">Select Book Type</string>
+    <string name="list_of_book">List Of Book</string>
+    <string name="book_name">Book Name</string>
+    <string name="book_author_name">Book Author Name</string>
+    <string name="author_name">Author Name</string>
+    <string name="book_genre_type">Book Genre Type</string>
+    <string name="book_type">Book Type</string>
+    <string name="book_launch_date">Book Launch date</string>
+    <string name="book_for_age_group">Book For Age Group</string>
+    <string name="search">Search</string>
+    <string name="edit">Edit</string>
+    <string-array name="spinner">
+        <item>"All"</item>
+        <item>"Thriller"</item>
+        <item>"Horror"</item>
+        <item>"Historical"</item>
+        <item>"Romance"</item>
+        <item>"Western"</item>
+    </string-array>
+</resources>
