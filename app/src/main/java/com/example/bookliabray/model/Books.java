@@ -1,4 +1,4 @@
-package com.example.bookliabray;
+package com.example.bookliabray.model;
 
 
 import android.util.Log;
@@ -6,14 +6,18 @@ import android.util.Log;
 import static android.content.ContentValues.TAG;
 
 public class Books {
-    String  bookNames;
+    int id;
+
+
+    String bookNames;
     String bookAuthorName;
     String bookLaunchDate;
     String bookType;
     String bookGenre;
     String bookAgePrefer;
 
-    public Books(String bookNames, String bookAuthorName, String bookLaunchDate, String bookType, String bookGenre, String bookAgePrefer) {
+    public Books(int id,String bookNames, String bookAuthorName,String bookGenre, String bookType,String bookLaunchDate , String bookAgePrefer) {
+        this.id=id;
         this.bookNames = bookNames;
         this.bookAuthorName = bookAuthorName;
         this.bookLaunchDate = bookLaunchDate;
@@ -21,6 +25,10 @@ public class Books {
         this.bookGenre = bookGenre;
         this.bookAgePrefer = bookAgePrefer;
     }
+    public int getId() {
+        return id;
+    }
+
 
     public String getBookNames() {
         return bookNames;

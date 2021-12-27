@@ -5,8 +5,8 @@
     <string name="welcome_to_book_library">Welcome to Book Library</string>
     <string name="enter_book_name">Enter Book Name</string>
     <string name="enter_book_author_name">Enter Book Author Name</string>
-    <string name="functional">Functional</string>
-    <string name="non_functional">Non Functional</string>
+    <string name="functional">Fiction</string>
+    <string name="non_functional">Non Fiction</string>
     <string name="enter_date_of_launch">Enter Date Of Launch</string>
     <string name="children">Children</string>
     <string name="select_book_prefer_age_group">Select Book Prefer Age Group</string>
@@ -25,6 +25,10 @@
     <string name="book_for_age_group">Book For Age Group</string>
     <string name="search">Search</string>
     <string name="edit">Edit</string>
+    <string name="edit_book_details">Edit Book Details</string>
+    <string name="book_name_title">Book Name:</string>
+    <string name="author_name_title">Author Name:</string>
+
     <string-array name="spinner">
         <item>"All"</item>
         <item>"Thriller"</item>

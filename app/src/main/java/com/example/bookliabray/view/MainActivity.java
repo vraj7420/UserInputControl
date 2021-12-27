@@ -1,4 +1,4 @@
-package com.example.bookliabray;
+package com.example.bookliabray.view;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -7,6 +7,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.example.bookliabray.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,11 +29,11 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case (R.id.menuItemAddBook):
-                Intent i=new Intent(MainActivity.this,AddBookScreen.class);
+                Intent i=new Intent(MainActivity.this, AddBookScreenActivity.class);
                 startActivity(i);
                 break;
             case (R.id.menuItemBookList):
-                Intent j=new Intent(MainActivity.this,BookList.class);
+                Intent j=new Intent(MainActivity.this, BookListActivity.class);
                 startActivity(j);
                 break;
         }

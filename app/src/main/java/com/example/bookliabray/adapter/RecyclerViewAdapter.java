@@ -1,8 +1,7 @@
-package com.example.bookliabray;
+package com.example.bookliabray.adapter;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,10 +13,13 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.bookliabray.R;
+import com.example.bookliabray.model.Books;
+import com.example.bookliabray.view.BookDetailsActivity;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Comparator;
-import java.util.Locale;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.RecyclerViewHolder> implements Filterable {
     ArrayList<Books> bookListFulll;
@@ -36,7 +38,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public RecyclerViewAdapter.RecyclerViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater recyclerInflater=LayoutInflater.from(ctx);
-        View recyclerView=recyclerInflater.inflate(R.layout.layout,null);
+        View recyclerView=recyclerInflater.inflate(R.layout.layout_booklist,null);
         return new RecyclerViewHolder(recyclerView);
     }
 
@@ -58,7 +60,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         return filter;
     }
 
-    Filter filter=new Filter() {
+    public Filter filter=new Filter() {
         @Override
         protected FilterResults performFiltering(CharSequence constraint) {
            ArrayList<Books>  filterArrayList=new ArrayList<>();
@@ -86,7 +88,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         }
     };
 
-    Filter spinnerFilterFunctional=new Filter() {
+   public Filter spinnerFilterFunctional=new Filter() {
         @Override
         protected FilterResults performFiltering(CharSequence constraint) {
         ArrayList<Books> filterArrayListFunctional=new ArrayList<>();
@@ -96,7 +98,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         }
         else {
             for (Books booklist:bookListFulll){
-                if(booklist.getBookType().toLowerCase().contains(constraint.toString().toLowerCase())){
+                if(booklist.getBookType().toLowerCase().equals(constraint.toString().toLowerCase())){
                     filterArrayListFunctional.add(booklist);
                 }
             }
@@ -118,7 +120,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
 
 
-    Filter spinnerFilterGenre=new Filter() {
+    public Filter spinnerFilterGenre=new Filter() {
         @Override
         protected FilterResults performFiltering(CharSequence constraint) {
             ArrayList<Books> filterTemp=new ArrayList<>();
@@ -173,14 +175,10 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         @Override
         public void onClick(View v) {
             int position=getAdapterPosition();
-            Intent i=new Intent(ctx,BookDetails.class);
+            Intent i=new Intent(ctx, BookDetailsActivity.class);
             Books temp=bookList.get(position);
-
-            String name=temp.getBookNames();
-            String author=temp.getBookAuthorNames();
-            Toast.makeText(ctx, name, Toast.LENGTH_SHORT).show();
-            i.putExtra("book",name);
-            i.putExtra("author",author);
+            int id=temp.getId();
+            i.putExtra("id",id);
             ctx.startActivity(i);
         }
     }

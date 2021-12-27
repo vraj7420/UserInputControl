@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.bookliabray">
+    package="com.example.bookliabray" >
 
     <application
         android:allowBackup="true"
@@ -8,19 +8,22 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.BookLiabray">
+        android:theme="@style/Theme.BookLibrary" >
         <activity
-            android:name=".BookDetails"
+            android:name=".view.editBookDataActivity"
             android:exported="false" />
         <activity
-            android:name=".BookList"
+            android:name=".view.BookDetailsActivity"
             android:exported="false" />
         <activity
-            android:name=".AddBookScreen"
+            android:name=".view.BookListActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
+            android:name=".view.AddBookScreenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.MainActivity"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
